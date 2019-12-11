@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from '@angular/router'
+import { Routes, RouterModule, RouterOutlet } from '@angular/router'
 import { PhotoListComponent } from "./photos/photo-list/photo-list.component";
 import { PhotoComponent } from "./photos/photo/photo.component";
 
@@ -16,7 +16,8 @@ const routes: Routes = [
 ]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 
 export class AppRoutingModule {}
